@@ -1,0 +1,49 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <div class="header bg-gradient-danger pb-1 pt-1 pt-md-1">
+        <div class="container-fluid">
+            <div class="header-body">
+              <form #f="ngForm">
+                <div class="form-group">
+                  <label for="keyword">Recherche</label>
+                  <input    ngModel placeholder="Tapez votre mot de clet de recherche ici!!" type="text" name="keyword" id="keyword" class="form-control">
+                </div>
+             </form>
+
+      <h2>Claim List</h2>
+    </div>
+
+
+           
+          </div>
+        </div>
+
+        
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>subject</th>
+            <th>description</th>
+            <th>file</th>
+            <th>date</th>
+
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let claim of claims | async">
+            <td>{{claim.subject}}</td>
+            <td>{{claim.description}}</td>
+            <td>{{claim.file}}</td>
+            <td>{{claim.date}}</td>
+
+
+            <td><button (click)="deleteClaim(claim.idClaim)" class="btn btn-danger">Delete</button>
+                <button (click)="claimDetails(claim.idClaim)" class="btn btn-info" style="margin-left: 10px">Details</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

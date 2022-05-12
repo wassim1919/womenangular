@@ -1,0 +1,26 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <div class="header bg-gradient-danger pb-1 pt-1 pt-md-1">
+        <div class="container-fluid">
+            <div class="header-body">
+<h2>Appointment Details</h2>  </div>
+
+
+           
+</div>
+</div>
+
+<hr/>
+<div *ngIf="appointment">
+  <div>
+    <label><b>Title: </b></label> {{appointment.title}}
+  </div>
+  <div>
+    <label><b>Date: </b></label> {{appointment.date}}
+  </div>
+ 
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Appointment List</button><br>

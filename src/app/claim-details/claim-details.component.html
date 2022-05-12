@@ -1,0 +1,32 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <div class="header bg-gradient-danger pb-1 pt-1 pt-md-1">
+        <div class="container-fluid">
+            <div class="header-body">
+<h2>Claim Details</h2>  </div>
+
+
+           
+</div>
+</div>
+
+<hr/>
+<div *ngIf="claim">
+  <div>
+    <label><b>Subject: </b></label> {{claim.subject}}
+  </div>
+  <div>
+    <label><b>Description: </b></label> {{claim.description}}
+  </div>
+  <div>
+    <label><b>File: </b></label> {{claim.file}}
+  </div>
+  <div>
+    <label><b>Date: </b></label> {{claim.date}}
+  </div>
+ 
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Claim List</button><br>

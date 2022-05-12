@@ -1,0 +1,46 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <div class="header bg-gradient-danger pb-1 pt-1 pt-md-1">
+        <div class="container-fluid">
+            <div class="header-body">
+<h3>Create Claim</h3></div>
+
+
+           
+</div>
+</div>
+  
+
+
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">subject</label>
+      <input type="text" class="form-control" id="subject" required [(ngModel)]="claim.subject" name="subject">
+    </div>
+
+    <div class="form-group">
+      <label for="name">description</label>
+      <input type="description" class="form-control" id="description" required [(ngModel)]="claim.description" name="description">
+    </div>
+
+    <div class="form-group">
+        <label for="name">file</label>
+        <input type="file" class="form-control" id="file" required [(ngModel)]="claim.file" name="file">
+      </div>
+      <div class="form-group">
+        <label for="name">date</label>
+        <input type="date" class="form-control" id="date" required [(ngModel)]="claim.date" name="date">
+      </div>
+  
+
+    <button type="submit" class="btn btn-success">Submit</button>
+
+    
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+  <!-- <button class="btn btn-success" (click)="newClaim()">Add</button> -->
+</div>
