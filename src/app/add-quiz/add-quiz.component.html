@@ -1,0 +1,45 @@
+<div class="header bg-gradient-danger pb-8 pt-5 pt-md-8">
+    <div class="container-fluid">
+      <div class="header-body">
+  <div class="row mt-5">
+    <div class="col">
+      <div class="card shadow">
+        <div class="card-header border-0">
+  <h3>Create Quiz</h3>
+        </div>
+  <div [hidden]="submitted" style="width: 400px;">
+    <form (ngSubmit)="onSubmit()">
+      <div class="pl-lg-4">
+        <div class="row">
+     
+  
+      <div class="form-group col-md-6">
+        <label for="name">name</label>
+        <input type="text" class="form-control" id="cours_nom" required [(ngModel)]="quiz.quiz_nom" name="cours_nom">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="name">description</label>
+        <input type="text" class="form-control" id="cours_description" required [(ngModel)]="quiz.quiz_description" name="cours_description">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="name">level</label>
+        <input type="text" class="form-control" id="level" required [(ngModel)]="quiz.quiz_lvl" name="level">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="name">coef</label>
+        <input type="number" class="form-control" id="coef" required [(ngModel)]="quiz.quiz_coef" name="coef">
+      </div>
+      
+  
+     
+  
+      
+        </div></div><div class="pl-lg-4">
+        <button type="submit" class="btn btn-success">Submit</button></div>
+    </form>
+  </div>
+  
+  <div [hidden]="!submitted">
+    <h4>You submitted successfully!</h4>
+    <!-- <button class="btn btn-success" (click)="newCours()">Add</button> -->
+  </div></div></div></div></div></div></div>

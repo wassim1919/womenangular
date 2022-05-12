@@ -1,0 +1,24 @@
+<h2>Employee Details</h2> 
+
+<hr/>
+<div *ngIf="cours">
+  <div>
+    <label><b>Cours Id: </b></label> {{cours.cours_id}}
+  </div>
+  <div>
+    <label><b>Cours Nom: </b></label> {{cours.cours_nom}}
+  </div>  
+  <div>
+    <label><b>Cours Description: </b></label> {{cours.cours_description}}
+  </div>
+  <div>
+    <label><b>Cours Status: </b></label> {{cours.cours_status}}
+  </div>  
+  <div>
+    <label><b>Enr NBR: </b></label> {{cours.enr_nbr}}
+  </div>  
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Cours List</button><br>

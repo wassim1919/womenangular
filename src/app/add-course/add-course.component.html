@@ -1,0 +1,49 @@
+<div class="header bg-gradient-danger pb-8 pt-5 pt-md-8">
+  <div class="container-fluid">
+    <div class="header-body">
+<div class="row mt-5">
+  <div class="col">
+    <div class="card shadow">
+      <div class="card-header border-0">
+<h3>Create Cours</h3>
+      </div>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="pl-lg-4">
+      <div class="row">
+   
+
+    <div class="form-group col-md-6">
+      <label for="name">name</label>
+      <input type="text" class="form-control" id="cours_nom" required [(ngModel)]="cours.cours_nom" name="cours_nom">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="name">description</label>
+      <input type="text" class="form-control" id="cours_description" required [(ngModel)]="cours.cours_description" name="cours_description">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="name">sujet choose:  </label>
+    <select  required [(ngModel)]="sujet.sujet_id" name="sujet_id">
+          <ng-container *ngFor="let sujet of sujets | async">
+          <option [value]="sujet.sujet_id" >
+            {{sujet.sujet_nom}}
+          </option>
+        </ng-container>
+        </select>
+    
+       
+        
+      </div>
+
+   
+
+    
+      </div></div><div class="pl-lg-4">
+      <button type="submit" class="btn btn-success">Submit</button></div>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+  <!-- <button class="btn btn-success" (click)="newCours()">Add</button> -->
+</div></div></div></div></div></div></div>
